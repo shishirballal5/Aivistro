@@ -1,0 +1,17 @@
+.account-data { display: grid; gap: 14px; margin-top: 8px; }
+.account-data .ad-card { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 20px; display: grid; gap: 10px; }
+.account-data .ad-card h3 { font-size: 15px; }
+.account-data .ad-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.account-data .ad-danger { border-color: rgba(255, 116, 106, .3); }
+.account-data .button.danger { border-color: rgba(255, 116, 106, .5); color: #ff9e98; }
+.account-data .button.danger:hover:not(:disabled) { background: rgba(255, 116, 106, .1); }
+.ad-dialog { text-align: left; max-height: 90vh; overflow: auto; }
+.success-modal > .ad-dialog { padding: 32px 28px; width: min(500px, 92vw); }
+.ad-dialog h2 { font: 24px var(--serif); }
+.ad-dialog h4 { font-size: 12px; margin-top: 16px; color: var(--paper); }
+.ad-dialog ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.ad-dialog .auth-form { margin-top: 18px; }
+.ad-dialog .ad-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-top: 6px; }
+.ad-check { display: flex !important; grid-template-columns: none; gap: 10px !important; align-items: flex-start; font-size: 12px; color: var(--muted); }
+.ad-check input { width: auto !important; min-height: 0 !important; margin-top: 3px; }
+.ad-check span { color: var(--paper) !important; font-size: 12px !important; font-weight: 400 !important; line-height: 1.5; }

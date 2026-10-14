@@ -1,0 +1,18 @@
+.sx-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.sx-chip { min-height: 34px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--a-line); background: #0a0d1f; color: var(--a-muted); font-size: 12px; font-weight: 600; }
+.sx-chip.on { background: rgba(123, 92, 255, .22); border-color: rgba(169, 156, 255, .6); color: #fff; }
+.sx-inline { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.sx-inline input { flex: 1; min-width: 160px; min-height: 40px; border: 1px solid var(--a-line); border-radius: 12px; background: #0a0d1f; padding: 0 13px; color: var(--a-ink); }
+.sx-thumb { width: 36px; height: 50px; object-fit: cover; border-radius: 6px; background: #0a0d1f; }
+.sx-key { display: grid; grid-template-columns: 1fr 96px; gap: 14px; align-items: start; }
+.sx-key img, .sx-key .sx-ph { width: 96px; height: 134px; object-fit: cover; border-radius: 10px; border: 1px solid var(--a-line); background: #0a0d1f; display: grid; place-content: center; color: var(--a-muted); font-size: 11px; text-align: center; padding: 6px; }
+.sx-key.wide { grid-template-columns: 1fr 160px; }
+.sx-key.wide img, .sx-key.wide .sx-ph { width: 160px; height: 90px; }
+.sx-list { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 6px; line-height: 1.5; }
+.sx-cast { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: center; margin-bottom: 8px; }
+.sx-cast input, .sx-cast select { min-height: 40px; border: 1px solid var(--a-line); border-radius: 12px; background: #0a0d1f; padding: 0 12px; color: var(--a-ink); min-width: 0; }
+.sx-meta { display: flex; gap: 18px; flex-wrap: wrap; color: var(--a-muted); font-size: 12px; margin-top: 6px; }
+.sx-bar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.sx-more { display: flex; justify-content: center; padding: 14px; border-top: 1px solid var(--a-line); }
+.sx-actions-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+@media (max-width: 640px) { .sx-cast { grid-template-columns: 1fr; } .sx-key, .sx-key.wide { grid-template-columns: 1fr; } }

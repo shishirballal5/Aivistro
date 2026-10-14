@@ -1,0 +1,12 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #06081a; color: #e9ebf5; font: 16px/1.65 "DM Sans", system-ui, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
+a { color: #a99cff; }
+.draft { border: 1px solid #ffb86b; background: rgba(255, 184, 107, .1); color: #ffd9a8; border-radius: 12px; padding: 14px 16px; margin: 18px 0 28px; font-size: 14px; }
+h1 { font: 400 40px/1.15 "Instrument Serif", Georgia, serif; margin: 6px 0 4px; }
+h2 { font-size: 20px; margin: 34px 0 6px; }
+.meta { color: #9aa0b8; font-size: 14px; }
+.ph { background: rgba(169, 156, 255, .18); border-radius: 4px; padding: 0 4px; }
+nav.top { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; margin-bottom: 8px; }
+footer { margin-top: 48px; color: #9aa0b8; font-size: 13px; }

@@ -1,0 +1,6 @@
+.team-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 12px; }
+.team-roles { display: grid; gap: 8px; margin-top: 8px; max-height: 340px; overflow-y: auto; }
+.team-roles .a-radio { display: flex; gap: 10px; align-items: flex-start; }
+.team-roles small { display: block; opacity: .7; }
+.team-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; padding: 16px 20px; align-items: end; }
+.team-meta { white-space: pre-wrap; word-break: break-all; font-size: 11px; margin: 6px 0 0; }

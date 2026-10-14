@@ -1,0 +1,9 @@
+.vu-drop { display: grid; gap: 10px; padding: 18px; border: 1px dashed rgba(169, 156, 255, .4); border-radius: 14px; background: rgba(123, 92, 255, .05); }
+.vu-progress { height: 10px; border-radius: 999px; background: #0a0d1f; overflow: hidden; border: 1px solid var(--a-line); }
+.vu-progress > i { display: block; height: 100%; background: linear-gradient(90deg, #7b5cff, #3fa9ff); transition: width .15s; }
+.vu-asset { border: 1px solid var(--a-line); border-radius: 14px; padding: 14px; display: grid; gap: 8px; margin-top: 12px; }
+.vu-asset header { display: flex; gap: 10px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.vu-asset .vu-name { font-weight: 600; word-break: break-all; }
+.vu-facts { display: flex; gap: 14px; flex-wrap: wrap; color: var(--a-muted); font-size: 12px; }
+.vu-subs { display: grid; gap: 8px; border-top: 1px solid var(--a-line); padding-top: 10px; }
+.vu-subs .sx-inline select, .vu-subs .sx-inline input { min-height: 40px; }

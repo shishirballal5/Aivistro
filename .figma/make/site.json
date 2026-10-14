@@ -1,0 +1,14 @@
+{
+  "description": "Stream original short drama series on AIVISTRO. Big emotions, beautifully short, with one membership for every episode.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  },
+  "title": "AIVISTRO \u00b7 Short dramas, beautifully told",
+  "icons": {
+    "icon": "/logo.jpg"
+  }
+}

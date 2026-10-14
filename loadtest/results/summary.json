@@ -1,0 +1,385 @@
+{
+    "root_group": {
+        "checks": {
+            "session 201": {
+                "name": "session 201",
+                "path": "::session 201",
+                "id": "f34e4231bc5d43ce69d826f7a79ec679",
+                "passes": 1050,
+                "fails": 0
+            },
+            "master playlist 200": {
+                "fails": 0,
+                "name": "master playlist 200",
+                "path": "::master playlist 200",
+                "id": "0f4dc87f03e897d3855ce556e7a6d8b7",
+                "passes": 1050
+            },
+            "variant playlist 200": {
+                "name": "variant playlist 200",
+                "path": "::variant playlist 200",
+                "id": "8d1cac1b497bf74d68b9452b44bdd3ac",
+                "passes": 1050,
+                "fails": 0
+            },
+            "key 200, 16 bytes": {
+                "path": "::key 200, 16 bytes",
+                "id": "7490458f1834b97f6b1c79652639b6ce",
+                "passes": 1050,
+                "fails": 0,
+                "name": "key 200, 16 bytes"
+            },
+            "segment 200": {
+                "path": "::segment 200",
+                "id": "54ffe9a4361f199b99db7f36ddbdd9e4",
+                "passes": 2430,
+                "fails": 0,
+                "name": "segment 200"
+            },
+            "progress 202 during playback": {
+                "name": "progress 202 during playback",
+                "path": "::progress 202 during playback",
+                "id": "c73925c3860043bc1cf52a5d9f62717c",
+                "passes": 1050,
+                "fails": 0
+            },
+            "heartbeat 200": {
+                "fails": 0,
+                "name": "heartbeat 200",
+                "path": "::heartbeat 200",
+                "id": "a1b3fb9637c6f00085de63b1c47c5a73",
+                "passes": 1050
+            }
+        },
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "anonymous browsing": {
+                "id": "55df44e6e0bb3f0cc1eaab7544b84bba",
+                "groups": {},
+                "checks": {
+                        "home 200": {
+                            "name": "home 200",
+                            "path": "::anonymous browsing::home 200",
+                            "id": "f4d53fd9eebcdacc43217d8137dba80e",
+                            "passes": 4843,
+                            "fails": 0
+                        },
+                        "series 200": {
+                            "path": "::anonymous browsing::series 200",
+                            "id": "d6d3e1b091aa651dcd7bf5b149d7a767",
+                            "passes": 4843,
+                            "fails": 0,
+                            "name": "series 200"
+                        },
+                        "detail 200": {
+                            "name": "detail 200",
+                            "path": "::anonymous browsing::detail 200",
+                            "id": "37cf0e9652329d444bf46da2c64d05d0",
+                            "passes": 4843,
+                            "fails": 0
+                        },
+                        "episodes 200": {
+                            "name": "episodes 200",
+                            "path": "::anonymous browsing::episodes 200",
+                            "id": "09249da856ac0cb4bc32b4cdea4fa873",
+                            "passes": 4843,
+                            "fails": 0
+                        },
+                        "plans 200": {
+                            "name": "plans 200",
+                            "path": "::anonymous browsing::plans 200",
+                            "id": "d8f5efb69abb75ff13a8aa8ae7f2c47f",
+                            "passes": 4843,
+                            "fails": 0
+                        }
+                    },
+                "name": "anonymous browsing",
+                "path": "::anonymous browsing"
+            },
+            "signed-in activity": {
+                "name": "signed-in activity",
+                "path": "::signed-in activity",
+                "id": "4d69849c19c16d28b085248c5c135ce8",
+                "groups": {},
+                "checks": {
+                        "me 200": {
+                            "path": "::signed-in activity::me 200",
+                            "id": "5ede3573261b04ae81ca6c53f0c7c1ed",
+                            "passes": 1205,
+                            "fails": 0,
+                            "name": "me 200"
+                        },
+                        "subscription 200": {
+                            "path": "::signed-in activity::subscription 200",
+                            "id": "46409fed648d02aff345a747cff906d5",
+                            "passes": 1205,
+                            "fails": 0,
+                            "name": "subscription 200"
+                        },
+                        "continue 200": {
+                            "passes": 1205,
+                            "fails": 0,
+                            "name": "continue 200",
+                            "path": "::signed-in activity::continue 200",
+                            "id": "fcaa869af581edcb90193bcc30fe020e"
+                        },
+                        "watchlist add": {
+                            "fails": 0,
+                            "name": "watchlist add",
+                            "path": "::signed-in activity::watchlist add",
+                            "id": "21d0aeb4f023f988fa6a11dd8c3114fc",
+                            "passes": 1205
+                        },
+                        "unread 200": {
+                            "fails": 0,
+                            "name": "unread 200",
+                            "path": "::signed-in activity::unread 200",
+                            "id": "6c4384e2935dd561fe2cbbd4c68bae3c",
+                            "passes": 1205
+                        }
+                    }
+            }
+        }
+    },
+    "metrics": {
+        "checks": {
+            "fails": 0,
+            "passes": 38970,
+            "value": 1
+        },
+        "http_reqs": {
+            "count": 40202,
+            "rate": 463.43115286528223
+        },
+        "data_sent": {
+            "count": 6696777,
+            "rate": 77197.52961523572
+        },
+        "http_req_failed": {
+            "fails": 40202,
+            "passes": 0,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_blocked": {
+            "max": 1.315,
+            "p(90)": 0.002,
+            "p(95)": 0.002,
+            "avg": 0.002444604746034776,
+            "min": 0,
+            "med": 0.001
+        },
+        "http_req_duration": {
+            "avg": 1.8630585543007947,
+            "min": 0.174,
+            "med": 1.061,
+            "max": 111.867,
+            "p(90)": 3.56,
+            "p(95)": 5.241
+        },
+        "http_req_sending": {
+            "avg": 0.0035569374657976327,
+            "min": 0,
+            "med": 0.002,
+            "max": 0.702,
+            "p(90)": 0.006,
+            "p(95)": 0.008
+        },
+        "http_req_receiving": {
+            "p(90)": 0.044,
+            "p(95)": 0.428,
+            "avg": 0.11059633849063996,
+            "min": 0.005,
+            "med": 0.012,
+            "max": 15.133
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0
+        },
+        "http_req_connecting": {
+            "max": 1.005,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.0012282473508780662,
+            "min": 0,
+            "med": 0
+        },
+        "vus_max": {
+            "min": 160,
+            "max": 160,
+            "value": 160
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 160
+        },
+        "iteration_duration": {
+            "avg": 1544.272305191742,
+            "min": 1005.41575,
+            "med": 1601.1608955000002,
+            "max": 2090.0025,
+            "p(90)": 1927.5475037,
+            "p(95)": 1955.41901245
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 1.8630585543007947,
+            "min": 0.174,
+            "med": 1.061,
+            "max": 111.867,
+            "p(90)": 3.56,
+            "p(95)": 5.241
+        },
+        "iterations": {
+            "count": 7098,
+            "rate": 81.82265367488615
+        },
+        "data_received": {
+            "count": 1485507832,
+            "rate": 17124287.52734108
+        },
+        "http_req_duration{scenario:signed_in}": {
+            "avg": 1.7449364315352665,
+            "min": 0.424,
+            "med": 1.042,
+            "max": 49.684,
+            "p(90)": 1.993,
+            "p(95)": 3.214799999999997,
+            "thresholds": {
+                "p(95)<600": false
+            }
+        },
+        "http_req_waiting": {
+            "med": 1.02,
+            "max": 111.856,
+            "p(90)": 3.211800000000002,
+            "p(95)": 4.794,
+            "avg": 1.748905278344347,
+            "min": 0.159
+        },
+        "group_duration": {
+            "max": 120.985666,
+            "p(90)": 8.543866300000001,
+            "p(95)": 10.988960649999994,
+            "avg": 6.216128182870355,
+            "min": 2.524167,
+            "med": 4.806979500000001
+        },
+        "playback_session_ms": {
+            "p(95)": 17.075899999999997,
+            "avg": 7.480632380952385,
+            "min": 1.745,
+            "med": 5.3085,
+            "max": 78.177,
+            "p(90)": 10.9623,
+            "thresholds": {
+                "p(95)<800": false
+            }
+        },
+        "segment_fetch_ms": {
+            "max": 26.221,
+            "p(90)": 6.148100000000001,
+            "p(95)": 9.557899999999993,
+            "avg": 3.3205489711934253,
+            "min": 0.54,
+            "med": 2.3725,
+            "thresholds": {
+                "p(95)<800": false
+            }
+        },
+        "hls_key_ms": {
+            "max": 20.301,
+            "p(90)": 2.8443,
+            "p(95)": 5.6523499999999975,
+            "avg": 1.889460000000003,
+            "min": 0.335,
+            "med": 1.2395,
+            "thresholds": {
+                "p(95)<400": false
+            }
+        },
+        "http_req_duration{scenario:browse}": {
+            "avg": 1.0856090852777194,
+            "min": 0.218,
+            "med": 0.856,
+            "max": 54.394,
+            "p(90)": 1.7346000000000006,
+            "p(95)": 2.307,
+            "thresholds": {
+                "p(95)<400": false
+            }
+        }
+    },
+    "setup_data": {
+        "subscribers": [
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4MSIsInN1YiI6IjU0IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.BHt-S7JgPirN117Ene67LGqJoYkHXiju5oSyPpX96qY",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4MiIsInN1YiI6IjU1IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.By1FjdGr5ojkzOxpHgreMnsZWqNRWFSZI0qqjf6USS4",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4MyIsInN1YiI6IjU2IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.Q0Mf5TzKDpJO7jU9qlSfco1TohX3cFzic4wHnLbc8lY",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4NCIsInN1YiI6IjU3IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.f7cmbxEJ-hcyJpLHp8LtCa178DZLqiJR8gyOXVY8B5k",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4NSIsInN1YiI6IjU4IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.qfQM6tV2S1-6frPfyMt7Gh7nqvCc3yMbBvGG6gyIbmk",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4NiIsInN1YiI6IjU5IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.LfZCygugSbps2blaWmCKg80v-ZdI46ie8qqjpGouTyM",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4NyIsInN1YiI6IjYwIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.7b0PjcQwbRQhDDCw7b_n6ssLANE9_qmcYTqqzQLPWYI",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4OCIsInN1YiI6IjYxIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.HZqZxI-h2KcP299NPYascYS_acIbhfDktQSLgcJpBIA",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI4OSIsInN1YiI6IjYyIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.EBUB9pZH1f1RU51ixz4p-lFR2iGQ4kTAioJ66Tk-9NE",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5MCIsInN1YiI6IjYzIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.BuqX6HVx9xu54qPwqLLJvqe_z6K9y4c1r8oguJYhyLc",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5MSIsInN1YiI6IjY0IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.lwMKUSYvMCn3YoftamDEP8dvn2avNRjFUXlA2Hbsx_w",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5MiIsInN1YiI6IjY1IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.HsVyEUqtQRBbcTeKi7UfrFv6E3gEfkGiVGpkdRsM35o",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5MyIsInN1YiI6IjY2IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.nMI1u72-bJUzRpdKcB_5KmavHB_GfrPyNIeGd1fAgOQ",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5NCIsInN1YiI6IjY3IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.DeN4msCAr2-E9ZxRMPXXJXFJMDQMfZA3XXRuYBQZ47o",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5NSIsInN1YiI6IjY4IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.qKDOqi8d9a9sVjUU6P2pp4dFKPwV4vJMkuHUqLGaMpo",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5NiIsInN1YiI6IjY5IiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.PPBk00X9LhPcHgnBQ3ewCacgQP8Bfm6Xe5jpX07A85M",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5NyIsInN1YiI6IjcwIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.MKSyzBeYywOaNu1w60KF4cxkrWo2s8ALNmUuVD-f5Rw",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5OCIsInN1YiI6IjcxIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.u074RreGrZrE4CKy2dTPO_VioOzeF6JkYmMcSUJgnXY",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI5OSIsInN1YiI6IjcyIiwiYXVkIjoidmlld2VyIiwiaXNzIjoiYWl2aXN0cm8iLCJpYXQiOjE3OTE5NTU0MjQsImV4cCI6MTc5MTk1NjMyNH0.l4AmIzmLkpwkqQWEibXDDRbNh47AV05OSL6tAt3QOzM",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDAiLCJzdWIiOiI3MyIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.nmIvoASQ6MHTQIhFgdRk_vWeFmwz7AtUW774VwjMJtU",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDEiLCJzdWIiOiI3NCIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.ishPaDCPkntJvzzl5_DTVOJc2dZEFMBh8_qO25SymVA",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDIiLCJzdWIiOiI3NSIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.yjFm1dqF459S5Hnc5iuHibE5t-mEM7moA6jnhOXzlsg",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDMiLCJzdWIiOiI3NiIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.CuPjUcKRJUOCZn0mK6XRurLho5GYUuVWi2m1Gfd8grM",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDQiLCJzdWIiOiI3NyIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.LCZm3lsi7yPA8ZUj_Mkv7cEwuaPN2UGA0C4uLMutQr0",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDUiLCJzdWIiOiI3OCIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.0MPQfgOqE3zBrSPEj13cCoPLtQIfUWL-vji3Z_DIfJQ",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDYiLCJzdWIiOiI3OSIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.jMqkN_rTpY05Imc6f5pJrPjvkz-oAyq0WIUjv4rbx1s",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDciLCJzdWIiOiI4MCIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.K182lVkqzPXR5g7l64uqfyCBqYBTN3cD337Fe709S9c",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDgiLCJzdWIiOiI4MSIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.yNenFxIjd26iOwxju2VqmjSqNyp9Lw-cIVVotxeLYS4",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMDkiLCJzdWIiOiI4MiIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.DF3mi4TYU73VqncTwGFAcRTFpfNtaS6LmndrrK7rB_Y",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxMTAiLCJzdWIiOiI4MyIsImF1ZCI6InZpZXdlciIsImlzcyI6ImFpdmlzdHJvIiwiaWF0IjoxNzkxOTU1NDI0LCJleHAiOjE3OTE5NTYzMjR9.dtCljFRrACfprgAasNgvaKDz9s8l5etx2w8lMgEsQVY"
+        ],
+        "episodeIds": [
+            "15",
+            "16",
+            "17"
+        ],
+        "playable": [
+            {
+                "id": "3",
+                "slug": "the-heiress-code"
+            },
+            {
+                "id": "2",
+                "slug": "the-last-alibi"
+            },
+            {
+                "id": "1",
+                "slug": "what-she-left-behind"
+            }
+        ],
+        "seriesIds": [
+            "3",
+            "2",
+            "1"
+        ],
+        "slugs": [
+            "the-heiress-code",
+            "the-last-alibi",
+            "what-she-left-behind"
+        ]
+    }
+}

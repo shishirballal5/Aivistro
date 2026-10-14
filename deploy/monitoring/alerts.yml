@@ -1,0 +1,40 @@
+# Alert rules for the metrics the API really exports: aivistro_http_requests_total{method,route,status},
+# aivistro_http_request_duration_seconds_bucket{method,route,le}, aivistro_queue_jobs{queue,state}, aivistro_process_uptime_seconds.
+# Thresholds are starting points: tune them after a load test and a week of real traffic.
+groups:
+  - name: aivistro
+    rules:
+      - alert: ApiDown
+        expr: up{job="aivistro-api"} == 0
+        for: 2m
+        labels: { severity: page }
+        annotations: { summary: "API is not answering its metrics endpoint" }
+      - alert: ApiServerErrors
+        expr: sum(rate(aivistro_http_requests_total{status=~"5.."}[5m])) / sum(rate(aivistro_http_requests_total[5m])) > 0.02
+        for: 5m
+        labels: { severity: page }
+        annotations: { summary: "More than 2% of requests are failing with 5xx" }
+      - alert: ApiSlow
+        expr: histogram_quantile(0.95, sum by (le) (rate(aivistro_http_request_duration_seconds_bucket{route!~".*/media/hls/.*"}[5m]))) > 1.5
+        for: 10m
+        labels: { severity: warn }
+        annotations: { summary: "p95 API latency above 1.5s (HLS segment routes excluded)" }
+      - alert: PaymentWebhookFailures
+        expr: sum(increase(aivistro_http_requests_total{route="/api/v1/payments/razorpay/webhook",status!~"2.."}[10m])) > 0
+        for: 0m
+        labels: { severity: page }
+        annotations: { summary: "Razorpay webhooks are being rejected: payments may not activate (the reconcile job is the safety net)" }
+      - alert: QueueBacklog
+        expr: aivistro_queue_jobs{state="waiting"} > 100
+        for: 15m
+        labels: { severity: warn }
+        annotations: { summary: "{{ $labels.queue }} queue has a backlog: is the worker running?" }
+      - alert: FailedJobs
+        expr: aivistro_queue_jobs{state="failed"} > 0
+        for: 30m
+        labels: { severity: warn }
+        annotations: { summary: "{{ $labels.queue }} has failed jobs waiting for an operator (see docs/OPERATIONS.md)" }
+      - alert: ApiRestarting
+        expr: changes(aivistro_process_uptime_seconds[15m]) > 2
+        labels: { severity: warn }
+        annotations: { summary: "API process restarted several times in 15 minutes" }

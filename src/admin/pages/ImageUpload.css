@@ -1,0 +1,13 @@
+.iu { display: grid; gap: 6px; }
+.iu-label { font-size: 13px; font-weight: 600; }
+.iu-row { display: flex; gap: 14px; align-items: flex-start; padding: 10px; border: 1px dashed var(--a-line); border-radius: 12px; }
+.iu-row.over { border-color: var(--a-accent, #7c5cff); background: rgba(124, 92, 255, 0.08); }
+.iu-box { flex: none; width: 96px; height: 134px; border-radius: 10px; border: 1px solid var(--a-line); background: #0a0d1f; display: grid; place-content: center; overflow: hidden; color: var(--a-muted); font-size: 11px; text-align: center; box-sizing: border-box; }
+.iu-box span { padding: 6px; }
+.iu.wide .iu-box { width: 160px; height: 90px; }
+.iu-box img { width: 100%; height: 100%; object-fit: cover; }
+.iu-side { display: grid; gap: 8px; min-width: 0; flex: 1; }
+.iu-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.iu-progress { height: 6px; border-radius: 4px; background: var(--a-line); overflow: hidden; }
+.iu-progress i { display: block; height: 100%; background: var(--a-accent, #7c5cff); transition: width 0.15s; }
+@media (max-width: 640px) { .iu-row { flex-direction: column; } }

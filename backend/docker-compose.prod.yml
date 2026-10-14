@@ -1,0 +1,32 @@
+# Reference production-style stack. Supply real secrets through the environment / an env file
+# that is NOT committed (e.g. `docker compose --env-file prod.env -f docker-compose.prod.yml up -d`).
+# MySQL and Redis are expected to be managed services; point DB_* / REDIS_* at them.
+x-app: &app
+  build: .
+  image: aivistro-backend:latest
+  env_file: [prod.env]
+  environment:
+    NODE_ENV: production
+  restart: unless-stopped
+
+services:
+  migrate:                       # one-shot: run first, must exit 0 before api/worker start
+    <<: *app
+    command: ["node", "node_modules/typeorm/cli.js", "migration:run", "-d", "dist/database/data-source.js"]
+    restart: "no"
+  api:
+    <<: *app
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    ports: ["3000:3000"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/v1/health/live').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+  worker:
+    <<: *app
+    command: ["node", "dist/worker.js"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    stop_grace_period: 60s       # let in-flight FFmpeg/payment jobs finish
